@@ -1,0 +1,8 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <!-- ondas -->
+    <path android:fillColor="#2EC4B6" android:pathData="M30,49h4v10h-4z M37,44h4v20h-4z M67,44h4v20h-4z M74,49h4v10h-4z" />
+    <!-- micrófono -->
+    <path android:fillColor="#E5484D" android:pathData="M54,30c-4.4,0 -8,3.6 -8,8v14c0,4.4 3.6,8 8,8s8,-3.6 8,-8V38c0,-4.4 -3.6,-8 -8,-8z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M44,52h-3c0,6.6 4.9,12.1 11.5,12.9V71h-5v3h13v-3h-5v-6.1C62.1,64.1 67,58.6 67,52h-3c0,5.5 -4.5,10 -10,10s-10,-4.5 -10,-10z" />
+</vector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand">#E5484D</color>
+    <color name="brand_dark">#B42318</color>
+    <color name="ink">#14161B</color>
+    <color name="surface_dark">#1C1F26</color>
+    <color name="accent_teal">#2EC4B6</color>
+    <color name="launcher_bg">#14161B</color>
+</resources>

@@ -1,0 +1,17 @@
+# Gradle / build
+.gradle/
+.kotlin/
+build/
+app/build/
+local.properties
+
+# Firma (NO subir claves a git)
+keystore.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+/GrabadoraPro.apk

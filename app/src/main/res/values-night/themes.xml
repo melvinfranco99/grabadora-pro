@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.GrabadoraPro" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#FF6B6F</item>
+        <item name="colorOnPrimary">#410002</item>
+        <item name="colorPrimaryContainer">#93000A</item>
+        <item name="colorOnPrimaryContainer">#FFDAD6</item>
+        <item name="colorSecondary">@color/accent_teal</item>
+        <item name="colorTertiary">@color/accent_teal</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+    </style>
+</resources>

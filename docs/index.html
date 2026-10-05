@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grabadora Pro · Descarga para Android</title>
+<meta name="description" content="Grabadora de audio profesional para Android: WAV sin pérdidas, reducción de ruido y mejora de voz de 0 a 100, límite de duración configurable.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='24' fill='%2314161B'/%3E%3Cpath fill='%232EC4B6' d='M30,49h4v10h-4z M37,44h4v20h-4z M67,44h4v20h-4z M74,49h4v10h-4z'/%3E%3Cpath fill='%23E5484D' d='M54,30c-4.4,0 -8,3.6 -8,8v14c0,4.4 3.6,8 8,8s8,-3.6 8,-8V38c0,-4.4 -3.6,-8 -8,-8z'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#f6f7f9; --surface:#ffffff; --border:#e2e5ea; --text:#14161b; --dim:#5b6270;
+    --red:#d93a40; --red-2:#e5484d; --teal:#1a9e93; --teal-bg:rgba(46,196,182,.12);
+    --shadow:0 1px 2px rgba(20,22,27,.06),0 8px 24px rgba(20,22,27,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0e1016; --surface:#171a22; --border:#2a2f3a; --text:#eceef2; --dim:#9aa1ad;
+      --red:#ff6b6f; --red-2:#ff8589; --teal:#2ec4b6; --teal-bg:rgba(46,196,182,.12);
+      --shadow:none;
+    }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--bg); color:var(--text); line-height:1.6;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 16px 64px}
+  header{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:64px 0 48px}
+  @media(max-width:720px){header{grid-template-columns:1fr;padding:40px 0 32px;text-align:center}}
+  .logo{width:72px;height:72px;border-radius:18px;display:block;margin-bottom:16px}
+  @media(max-width:720px){.logo{margin:0 auto 16px}}
+  h1{font-size:clamp(2rem,6vw,2.8rem);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
+  .sub{color:var(--dim);font-size:1.08rem;margin:0 0 24px;max-width:32em}
+  .cta{
+    display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;
+    text-decoration:none;padding:15px 28px;border-radius:14px;font-weight:600;font-size:1.05rem;
+    transition:transform .12s ease,filter .12s ease;
+  }
+  .cta:hover{transform:translateY(-2px);filter:brightness(1.08)}
+  .cta svg{width:20px;height:20px}
+  .meta{color:var(--dim);font-size:.85rem;margin-top:12px}
+  .alt{font-size:.85rem;margin-top:4px}
+  a{color:var(--teal)}
+
+  /* Mock del teléfono */
+  .phone{
+    justify-self:center;width:260px;border-radius:36px;padding:14px;background:#0b0c10;
+    box-shadow:0 30px 60px rgba(0,0,0,.25);border:1px solid #2a2f3a;
+  }
+  .screen{background:#14161b;border-radius:24px;padding:18px 14px;color:#eceef2;font-size:12px}
+  .rec{background:#1f232c;border-radius:18px;padding:16px;text-align:center}
+  .rec .st{display:flex;align-items:center;justify-content:center;gap:6px;color:#c9ced8;font-size:11px}
+  .rec .st i{width:8px;height:8px;border-radius:50%;background:#e5484d;animation:blink 1.2s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  @media (prefers-reduced-motion: reduce){.rec .st i{animation:none}.bars span{animation:none!important}}
+  .rec .t{font-size:34px;font-weight:300;font-variant-numeric:tabular-nums;margin:2px 0}
+  .bars{display:flex;gap:3px;justify-content:center;align-items:center;height:30px;margin:8px 0 12px}
+  .bars span{width:4px;border-radius:2px;background:#2ec4b6;animation:lv 1s ease-in-out infinite}
+  @keyframes lv{0%,100%{height:6px}50%{height:28px}}
+  .btns{display:flex;gap:6px;justify-content:center}
+  .btns b{border-radius:999px;padding:7px 12px;font-weight:600;font-size:11px}
+  .btns .p{background:#3a2a2c;color:#ffb3b5}.btns .s{background:#ff6b6f;color:#410002}
+  .li{display:flex;gap:10px;align-items:center;padding:9px 4px;border-bottom:1px solid #232733}
+  .li .ic{width:26px;height:26px;border-radius:7px;background:rgba(46,196,182,.15)}
+  .li small{display:block;color:#8e95a2;font-size:10px}
+  .tag{font-size:9px;color:#2ec4b6;background:rgba(46,196,182,.15);border-radius:4px;padding:0 4px;margin-left:4px}
+
+  h2{font-size:1.35rem;margin:48px 0 16px;letter-spacing:-.01em}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  .feat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+  .feat .k{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--teal)}
+  .feat b{display:block;margin:4px 0 4px;font-size:1.02rem}
+  .feat p{margin:0;color:var(--dim);font-size:.92rem}
+
+  .sliders{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)}
+  .sl{margin:6px 0 18px}
+  .sl .row{display:flex;justify-content:space-between;font-weight:600}
+  .sl .row span{color:var(--red);font-variant-numeric:tabular-nums}
+  .track{height:6px;border-radius:3px;background:var(--border);margin-top:8px;position:relative}
+  .track i{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--red)}
+  .sl p{margin:6px 0 0;color:var(--dim);font-size:.9rem}
+
+  ol{padding-left:1.3em;margin:0}
+  ol li{margin:.45em 0}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 24px;box-shadow:var(--shadow)}
+  code{background:var(--teal-bg);border-radius:6px;padding:1px 6px;font-size:.88em}
+  footer{text-align:center;color:var(--dim);font-size:.85rem;margin-top:48px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <svg class="logo" viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="24" fill="#14161B"/><path fill="#2EC4B6" d="M30,49h4v10h-4z M37,44h4v20h-4z M67,44h4v20h-4z M74,49h4v10h-4z"/><path fill="#E5484D" d="M54,30c-4.4,0 -8,3.6 -8,8v14c0,4.4 3.6,8 8,8s8,-3.6 8,-8V38c0,-4.4 -3.6,-8 -8,-8z"/><path fill="#fff" d="M44,52h-3c0,6.6 4.9,12.1 11.5,12.9V71h-5v3h13v-3h-5v-6.1C62.1,64.1 67,58.6 67,52h-3c0,5.5 -4.5,10 -10,10s-10,-4.5 -10,-10z"/></svg>
+      <h1>Grabadora Pro</h1>
+      <p class="sub">Graba audio con calidad de estudio y límpialo después: reducción de ruido y mejora de voz ajustables de 0 a 100, sin conexión y sin anuncios.</p>
+      <a class="cta" href="GrabadoraPro.apk" download>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
+        Descargar APK
+      </a>
+      <div class="meta">Android 8.0 o superior · v1.0.0 · 4,7 MB</div>
+      <div class="alt">¿Problemas con la descarga? <a href="https://github.com/melvinfranco99/grabadora-pro/releases/latest">Descárgala desde GitHub Releases</a></div>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="rec">
+          <div class="st"><i></i>Grabando</div>
+          <div class="t">00:12:47</div>
+          <div style="color:#8e95a2;font-size:10px">Quedan 1:47:13 hasta el límite</div>
+          <div class="bars">
+            <span style="animation-delay:-.1s"></span><span style="animation-delay:-.5s"></span><span style="animation-delay:-.3s"></span><span style="animation-delay:-.8s"></span><span style="animation-delay:-.2s"></span><span style="animation-delay:-.6s"></span><span style="animation-delay:-.4s"></span><span style="animation-delay:-.9s"></span><span style="animation-delay:-.15s"></span>
+          </div>
+          <div class="btns"><b class="p">❚❚ Pausa</b><b class="s">■ Detener</b></div>
+        </div>
+        <div style="margin:14px 2px 4px;font-weight:600">Mis grabaciones</div>
+        <div class="li"><div class="ic"></div><div>Entrevista<span class="tag">Mejorada</span><small>5 oct · 42:10 · 232 MB</small></div></div>
+        <div class="li"><div class="ic"></div><div>Entrevista<small>5 oct · 42:10 · 232 MB</small></div></div>
+        <div class="li" style="border:0"><div class="ic"></div><div>Clase de historia<small>3 oct · 1:31:05 · 500 MB</small></div></div>
+      </div>
+    </div>
+  </header>
+
+  <h2>Qué hace</h2>
+  <div class="grid">
+    <div class="feat"><div class="k">Grabación</div><b>WAV sin pérdidas</b><p>48 kHz / 16 bits sin compresión. Sigue grabando con la pantalla apagada o fuera de la app, con pausa y reanudación.</p></div>
+    <div class="feat"><div class="k">Límite</div><b>2 horas, configurable</b><p>Al alcanzar el límite se detiene y guarda sola. Puedes cambiarlo de 1 minuto a 23 h 59 min.</p></div>
+    <div class="feat"><div class="k">Biblioteca</div><b>Sólo tus grabaciones</b><p>Lista con las grabaciones hechas con la app: reproducir, renombrar, compartir, exportar a Música o borrar.</p></div>
+  </div>
+
+  <h2>Postproducción, de 0 a 100</h2>
+  <div class="sliders">
+    <div class="sl">
+      <div class="row">Reducción de ruido <span>70</span></div>
+      <div class="track"><i style="width:70%"></i></div>
+      <p>Supresión espectral adaptativa: detecta el perfil del ruido de fondo (ventiladores, zumbidos, tráfico lejano) y lo elimina sin apagar la voz. En pruebas mejora la relación señal/ruido en ~20 dB a intensidad 100.</p>
+    </div>
+    <div class="sl">
+      <div class="row">Mejora de voz <span>50</span></div>
+      <div class="track"><i style="width:50%"></i></div>
+      <p>Cadena de estudio: filtro anti-rumble, limpieza de graves embarrados, realce de presencia (2–4 kHz), brillo, compresor y normalización a −1 dBFS.</p>
+    </div>
+    <p style="margin:0;color:var(--dim);font-size:.9rem">Previsualiza 20 segundos y compara <b>Original / Procesado</b> antes de aplicar. El original nunca se toca: el resultado se guarda como copia «(mejorada)».</p>
+  </div>
+
+  <h2>Cómo instalar</h2>
+  <div class="card">
+    <ol>
+      <li>Abre esta página desde el móvil y pulsa <b>Descargar APK</b>.</li>
+      <li>Abre el archivo descargado. Si Android lo pide, permite <b>instalar apps de esta fuente</b>.</li>
+      <li>Abre <b>Grabadora Pro</b> y concede el permiso de micrófono (y notificaciones, para controlar la grabación en segundo plano).</li>
+    </ol>
+  </div>
+
+  <footer>
+    Código fuente en <a href="https://github.com/melvinfranco99/grabadora-pro">github.com/melvinfranco99/grabadora-pro</a><br>
+    Graba sólo conversaciones en las que participes o con el consentimiento de los demás.
+  </footer>
+</div>
+</body>
+</html>
